@@ -1,17 +1,13 @@
 import urllib
 import urllib2
 
-def get_ip():
-	full_url = 'http://automation.whatismyip.com/n09230945.asp'
-	data = urllib2.urlopen(full_url)
-	return str(data)
 
 url = 'https://ccahack.bergen.org/auth/perfigo_validate.jsp'
 values = {
 	'reqFrom' : 'perfigo_simple_login.jsp',
 	'uri' : 'https://ccahack.bergen.org/',
 	'cm' : 'ws32vklm',
-	'userip' : get_ip(),
+	'userip' : '168.229.108.58',
 	'os' : 'MAC_OSX',
 	'index' : '4',
 	'username' : 'USERNAME_HERE',
