@@ -9,3 +9,7 @@ Installation:
 * Change USERNAME\_HERE to your username
 * Change PASSWORD\_HERE to your password
 * Run script to login in (suggested: every 30 minutes)
+
+```python
+python auto_login.py
+```
