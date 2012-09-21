@@ -1,17 +1,25 @@
 import urllib
 import urllib2
+import socket
 
+username = 'USERNAME'
+password = 'PASSWORD'
+
+def get_ip():
+	s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+	s.connect(("google.com",80))
+	return (s.getsockname()[0])
 
 url = 'https://ccahack.bergen.org/auth/perfigo_validate.jsp'
 values = {
 	'reqFrom' : 'perfigo_simple_login.jsp',
 	'uri' : 'https://ccahack.bergen.org/',
 	'cm' : 'ws32vklm',
-	'userip' : '168.229.108.58',
+	'userip' : get_ip(),
 	'os' : 'MAC_OSX',
 	'index' : '4',
-	'username' : 'USERNAME_HERE',
-	'password' : 'PASSWORD_HERE',
+	'username' : username,
+	'password' : password,
 	'provider' : 'BCA',
 	'login_submit' : 'Continue'
 }
